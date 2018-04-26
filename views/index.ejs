@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>DinBing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="/uploads/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/login.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="/">DinBing</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+
+    <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-md-6">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+
+                <div class="carousel-inner">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="<%= news.articles[0].urlToImage %>" alt="<%= news.articles[0].title %>" width="100%" height="100%">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3><%= news.articles[0].title %></h3>
+                          <p><%= news.articles[0].description %></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="<%= news.articles[1].urlToImage %>" alt="<%= news.articles[1].title %>" width="100%" height="100%">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3><%= news.articles[1].title %></h3>
+                          <p><%= news.articles[1].description %></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="<%= news.articles[2].urlToImage %>" alt="<%= news.articles[2].title %>" width="100%" height="100%">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3><%= news.articles[2].title %></h3>
+                          <p><%= news.articles[2].description %></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div id="main">
+                <div class="main">
+                    <form action="/" method="post">
+
+                        <h1>
+                            <a href="/auth/facebook" class="btn-social btn-facebook btn-lg">
+                                <i class="fa fa-facebook"></i> Login With Facebook
+                            </a>
+                        </h1>
+
+                        <h1>
+                            <a href="/auth/google" class="btn-social btn-gplus btn-lg">
+                                <i class="fa fa-google-plus"></i> Login With Google
+                            </a>
+                        </h1>
+
+                        <h1>
+                            Login
+                        </h1>
+
+
+                        <div class="inset">
+                            <p>
+                                <label for="email">EMAIL ADDRESS</label>
+                                <input type="text" name="email" placeholder="" />
+                            </p>
+                            <p>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" name="password" placeholder="" />
+                            </p>
+
+                        </div>
+
+                        <p class="p-container">
+                            <span><a href="/signup">Not Yet Registered?</a></span>
+                            <input type="submit" class="login-log" style=" background: #3bb5ec; border: #3bb5ec;" value="Login">
+                        </p>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
