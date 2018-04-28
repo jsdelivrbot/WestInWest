@@ -24,7 +24,7 @@ const container = require('./container');
 
 container.resolve( function( _, users , admin , home, group, results, privatechat, profile, interests, news, article) {
   mongoose.Promise = global.Promise;
-//   mongoose.connect('mongodb://arghyaj:9832481461@ds157089.mlab.com:57089/dinbing', {useMongoClient: true});
+  mongoose.connect('mongodb://arghyaj:9832481461@ds157089.mlab.com:57089/dinbing', {useMongoClient: true});
   mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
   const app = SetupExpress();
 
@@ -86,8 +86,8 @@ container.resolve( function( _, users , admin , home, group, results, privatecha
     app.use(validator());
 
     app.use(session({
-        secret: process.env.SECRETKEY,
-//         secret: "IHaveADream",
+//         secret: process.env.SECRETKEY,
+        secret: "IHaveADream",
         resave: false,
         saveUninitialized: false,
         store: new MongoStore({mongooseConnection: mongoose.connection})
