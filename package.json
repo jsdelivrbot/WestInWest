@@ -52,5 +52,16 @@
   },
   "devDependencies": {
     "nodemon": "^1.14.10"
-  }
+  },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/Arghyaj/WestInWest"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "author": "Arghyajyoti Barman",
+  "license": "MIT"
 }
