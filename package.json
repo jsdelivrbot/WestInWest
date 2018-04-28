@@ -2,7 +2,7 @@
   "name": "dinbing",
   "version": "1.0.0",
   "description": "A chat App",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "9.3.0",
     "npm": "5.5.1"
