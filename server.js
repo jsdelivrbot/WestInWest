@@ -32,7 +32,7 @@ container.resolve( function( _, users , admin , home, group, results, privatecha
     const app = express();
     const server = http.createServer(app);
     const io = socketIO(server);
-    server.listen(process.env.PORT || 3000, function() {
+    server.listen(5000, function() {
       console.log('Listening on port 3000');
     });
     ConfigureExpress(app , io);
